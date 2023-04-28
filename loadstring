@@ -1,6 +1,31 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 
-local message = Instance.new("Message", workspace)
-        message.Text = "Loaded! The CR7 Config By Dev."
-        wait(15)
-        message:Destroy()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Data = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game)
+
+local Window = Rayfield:CreateWindow({
+	Name = "Al-Islam Private Config",
+	LoadingTitle = "Loading...",
+	LoadingSubtitle = "Version 4.1",
+	ConlfigurationSaving = {
+		Enabled = true,
+		FolderName = "Al-Islam Key",
+		FileName = "Al-Islam Key Saving"
+	},
+        Discord = {
+        	Enabled = false,
+        	Invite = "jXEnPQYNSd", -- The Discord invite code, do not include discord.gg/
+        	RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+	},
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+		Title = "Al-Islam Private Config",
+		Subtitle = "Key System",
+		Note = "If You Bought This Then You Have The Key.",
+		FileName = "Al-Islam Key",
+		SaveKey = true,
+		GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+		Key = "Halal_356789ABCjghwk"
+	}
+})
+
